@@ -8,6 +8,7 @@ is to show NLP methods for email spam classification.
 The datasets used in this project are the following 
 
 1. [Enron Dataset](https://www.kaggle.com/datasets/wcukierski/enron-email-dataset)
+2. [Fraudulent Email Corpus](https://www.kaggle.com/datasets/rtatman/fraudulent-email-corpus)
 
 The process of training and testing is formed by the following steps:
 
