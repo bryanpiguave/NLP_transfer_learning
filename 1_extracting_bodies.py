@@ -31,3 +31,15 @@ with open("input/enron_bodies","wb") as fp:
     pickle.dump(obj=bodies,file=fp)
 
 # Extracting data from fraudulent emails
+
+with open("input/fraudulent_emails.txt") as fp:
+    fp = fp.read()
+
+fraud_emails=fp.split("From r")
+print("Successfully loaded {} spam emails".format(len(fraud_emails)))
+
+fraud_emails = pd.DataFrame(fraud_emails,columns=["message"],   dtype=str)
+fraud_emails = extract_messages(df=fraud_emails)
+
+with open("input/fraud_emails","wb") as fp:
+    pickle.dump(obj=fraud_emails,file=fp)
